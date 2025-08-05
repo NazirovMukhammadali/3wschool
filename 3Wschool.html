@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="data:image/png;base64,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"
+                alt="" class="icons">
+            <div class="navbar-left-wrapper">
+                <div> Tutorial </div>
+                <div>Exercises</div>
+                <div>Certificates</div>
+                <div>Services</div>
+                <div>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+            </div>
+            <i style="font-size: 20px;" class="fa fa-adjust" aria-hidden="true"></i>
+        </div>
+
+        <div class="navbar-right">
+            <i style="color: #07dcdc;" class="fa fa-briefcase" aria-hidden="true"></i>
+            <div class="icon-right">Job</div>
+            <i style="color: #07dcdc;" class="fa fa-code" aria-hidden="true"></i>
+            <div class="icon-right">Spaces</div>
+            <i style="color: #07dcdc;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div class="icon-right">Get Certified</div>
+            <button class="btn-sign" style="background-color: #04AA6D;">Sign Up</button>
+            <button class="btn-log" style="background-color: wheat;">Log in</button>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="navbar-two">
+        <div class="nav-bar">HTML</div>
+        <div class="nav-bar">CSS</div>
+        <div class="nav-bar">JAVASCRIPT</div>
+        <div class="nav-bar">PHP</div>
+        <div class="nav-bar">JAVA</div>
+        <div class="nav-bar">PHYTON</div>
+        <div class="nav-bar">C+</div>
+        <div class="nav-bar">C#</div>
+        <div class="nav-bar">SQL</div>
+        <div class="nav-bar">HOWTO</div>
+        <div class="nav-bar">W3.CSS</div>
+        <div class="nav-bar">C</div>
+        <div class="nav-bar">BOOTSTRAPT</div>
+        <div class="nav-bar">REACT</div>
+        <div class="nav-bar">REACT</div>
+        <div class="nav-bar">MYSQL</div>
+        <div class="nav-bar">JQUERY</div>
+        <div class="nav-bar">EXCEL</div>
+        <div class="nav-bar">XML</div>
+        <div class="nav-bar">DJANGO</div>
+        <div class="nav-bar">NODEJS</div>
+        <div class="nav-bar">SQL</div>
+        <a href="" class="ga-nav">djdghdh</a>
+        <a href="" class="ga-nav">jkfkhdd</a>
+        <a href="" class="ga-nav">djkss</a>
+
+    </div>
+
+
+    </div>
+
+
+    <div class="main-con">
+
+        <h1 class="main-h1">Learn to code</h1>
+        <h1 class="main-h1-small">With the world's largest web developer site.</h1>
+        <input class="main-input" type="text" name="" id="" placeholder="Search our tutorials ...">
+        <a href="" class="main-a">Not Sure Where to Begin? </a>
+    </div>
+    <div class="html-con">
+        <div class="html-inner-con">
+            <div class="innerr">
+                <h1 class="html-h1">HTML</h1>
+                <h1 class="html-language">The language for building web pages</h1>
+                <button class="html-btn" style="background-color: #04AA6D;">Learn HTML</button>
+                <button class="html-btn" style="background-color: #FFF4A3;">Video Tutorial</button>
+                <button class="html-btn" style="background-color: #282A35; color:white;">HTML References</button>
+                <button class="html-btn" style="background-color: #FFC0C7;">Get Certified</button>
+            </div>
+
+        </div>
+        <div class="html-inner-rasm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiMh5TtGbWqgJ0rZO8J4qy7-NRKUyT_lNWUiticBCgczYeex7XO8hmdxM6SWbhNoMgFws&usqp=CAU"
+                alt="">
+        </div>
+
+    </div>
+    <div class="html-con" style="background-color: #FFF4A3;">
+        <div class="html-inner-con">
+            <div class="innerr">
+                <h1 class="html-h1">CSS</h1>
+                <h1 class="html-language">The language for styling web pages</h1>
+                <button class="html-btn" style="background-color: #04AA6D;">Learn CSS</button>
+                <!-- <button class="html-btn" style="background-color: #FFF4A3;">Video Tutorial</button> -->
+                <button class="html-btn" style="background-color: #282A35; color:white;">CSS References</button>
+                <button class="html-btn" style="background-color: #FFC0C7;">Get Certified</button>
+            </div>
+
+        </div>
+        <div class="html-inner-rasm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiMh5TtGbWqgJ0rZO8J4qy7-NRKUyT_lNWUiticBCgczYeex7XO8hmdxM6SWbhNoMgFws&usqp=CAU"
+                alt="">
+        </div>
+
+    </div>
+    <div class="html-con" style="background-color: #282A35;">
+        <div class="html-inner-con">
+            <div class="innerr">
+                <h1 class="html-h1" style="color: white; font-size: 10ch;">JavaScript</h1>
+                <h1 class="html-language" style="color: white;">The language for programming web pages</h1>
+                <button class="html-btn" style="background-color: #04AA6D;">Learn HTML</button>
+                <!-- <button class="html-btn" style="background-color: #FFF4A3;">Video Tutorial</button> -->
+                <button class="html-btn" style="background-color: white;">HTML References</button>
+                <button class="html-btn" style="background-color: #FFC0C7;">Get Certified</button>
+            </div>
+
+        </div>
+        <div class="html-inner-rasm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiMh5TtGbWqgJ0rZO8J4qy7-NRKUyT_lNWUiticBCgczYeex7XO8hmdxM6SWbhNoMgFws&usqp=CAU"
+                alt="">
+        </div>
+
+    </div>
+    <div class="html-con" style="background-color: #F3ECEA;">
+        <div class="html-inner-con">
+            <div class="innerr">
+                <h1 class="html-h1">Python</h1>
+                <h1 class="html-language">A popular programming language</h1>
+                <button class="html-btn" style="background-color: #04AA6D;">Learn Python</button>
+                <!-- <button class="html-btn" style="background-color: #FFF4A3;">Video Tutorial</button> -->
+                <button class="html-btn" style="background-color: #282A35; color:white;">Python References</button>
+                <button class="html-btn" style="background-color: #FFC0C7;">Get Certified</button>
+            </div>
+
+        </div>
+        <div class="html-inner-rasm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiMh5TtGbWqgJ0rZO8J4qy7-NRKUyT_lNWUiticBCgczYeex7XO8hmdxM6SWbhNoMgFws&usqp=CAU"
+                alt="">
+        </div>
+
+    </div>
+    <div class="html-con" style="background-color: #96D4D4;">
+        <div class="html-inner-con">
+            <div class="innerr">
+                <h1 class="html-h1">SQL</h1>
+                <h1 class="html-language">A programming language for database</h1>
+                <button class="html-btn" style="background-color: #04AA6D;">Learn SQL</button>
+                <!-- <button class="html-btn" style="background-color: #FFF4A3;">Video Tutorial</button> -->
+                <button class="html-btn" style="background-color: #282A35; color:white;">SQL References</button>
+                <button class="html-btn" style="background-color: #FFC0C7;">Get Certified</button>
+            </div>
+
+        </div>
+        <div class="html-inner-rasm">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRqyDwF--wAeTodIJ7RnZrwg5QcSb2ytdJ8TI4pkBkphu581vNw"
+                alt="">
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="wrapper-box">
+            <h1>PHP</h1>
+            <h6 class="webphp-text">A web server programming language</h6>
+            <button class="html-btn">Learn PHP</button>
+        </div>
+        <div style="background-color: #FFF4A3;" class="wrapper-box">
+            <h1>jQuery</h1>
+            <h6 class="webphp-text">A JS library for developing web pages</h6>
+            <button class="html-btn">Learn jQuery</button>
+        </div>
+        <div style="background-color: #F3ECEA;;" class="wrapper-box">
+            <h1>Java</h1>
+            <h6>A programming language</h6>
+            <button class="html-btn">Learn Java</button>
+        </div>
+        <div style="background-color: #D9EEE1;" class="wrapper-box">
+            <h1>C++</h1>
+            <h6>A programming language</h6>
+            <button class="html-btn">Learn C++</button>
+        </div>
+        <div style="background-color: #96D4D4;;" class="wrapper-box">
+            <h1> W3.Css</h1>
+            <h6>A CSS framework for faster and better responsive web pages</h6>
+            <button class="html-btn">Learn W3.CSS</button>
+        </div>
+        <div style="background-color: #E7E9EB;" class="wrapper-box">
+            <h1> Bootstrapt</h1>
+            <h6>A CSS framework for designing better web pages</h6>
+            <button class="html-btn">Learn Bootstrapt</button>
+        </div>
+
+
+        <div style="background-color: #96D4D4;;" class="wrapper-double-box">
+            <h1>C</h1>
+        </div>
+        <div style="background-color: #E7E9EB;" class="wrapper-double-box">
+            <h1>C#</h1>
+        </div>
+
+    </div>
+
+    <div class="wrapper-minicon">
+        <div style="background-color: #E7E9EB;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div style="background-color: aquamarine;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div style="background-color: aqua;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div style="background-color: #bd1991 ;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div style="background-color: #FFF4A3;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div style="background-color: #E7E9EB;" class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+            <h1></h1>
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+        <div class="mini-con">
+
+        </div>
+    </div>
+
+
+    <div class="one">
+        <div>
+            <h1 class="code-editor">Code Editor</h1>
+            <h5 class="text2">With our online code editor, you can edit code and view the result in your browser</h5>
+            <img src="https://www.w3schools.com/codeeditor.gif" alt=""><br>
+            <button class="try-btn" style="background-color: #04AA6D;">Try Fronted Editor (HTML/CSS/JS)</button><br>
+            <button class="try-btn2" style="background-color: #FFF4A3;">Try BackEnd Editor
+                (PHYTON/PHP/JAVA/C..)</button>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="two-box">
+        <div class="third3">
+            <h1 class="wspace" style="font-size: 65px; font-weight: 700;">W3School Spaces</h1>
+            <h3 style="margin-top: 35px; padding-left: 400px; font-size: 25px;">If you want to create your own website,
+                check out <a class="w3school-text" href="https://www.w3schools.com/spaces/index.php"> W3Schools
+                    Spaces.</a></h3>
+            <h3 style="margin-top: 35px; padding-left: 480px; font-size: 25px;">It is free to use, and does not require
+                any setup:</h3><br>
+            <img src="https://www.w3schools.com/spaces/dynamicspaces.gif" style="max-width: 100%;
+            width: 850px; padding-left: 300px;
+            margin-bottom: 55px;
+            margin-top: 20px;" alt="Dynamic Spaces">
+            <img src="https://www.w3schools.com/how-spaces-works3.png" class="w3-hide-medium w3-hide-small"
+                style="max-width:100%;margin:auto auto 35px auto; padding-left: 130px;" loading="lazy">
+            <a href="/spaces/index.php" class="ws-btn tut-button">Learn More</a><br>
+        </div>
+    </div>
+
+
+    <div class="fourst-box">
+        <div class="fourst-box2">
+            <h1 class="code-game">Code Game</h1><br>
+            <h5 class="help-text">Help the Lynx collect pine cones!</h5>
+            <img style="margin: 20px; padding-left: 70px;width: 150px; height: 200px;"
+                src="https://www.w3schools.com/images/w3lynx_200.png" alt=""><br>
+            <button style="margin: 40px;" class="html-btn">Play Game</button>
+
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer2">
+
+
+            <i style=" padding-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;" class="fa fa-user-circle" aria-hidden="true"></i>
+            <div class="footer-big-text">SPACES</div>
+            <div class="footer-big-text">UPGRADE</div>
+            <div class="footer-big-text"> NEWSLETTER</div>
+            <div class="footer-big-text">GET CERTIFIED</div>
+            <div class="footer-big-text">REPORT ERROR</div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="top-tutorial">
+            <h5 style="font-size: 20px; color: white;">Top Tutorial</h5><br>
+            <a class="small-text" href="">HTML Tutorial</a><br>
+            <a href="">Css Tutorial</a><br>
+            <a href="">JavaScript Tutorial</a><br>
+            <a href="">How TO Tutorial</a><br>
+            <a href="">SQL Tutorial</a><br>
+            <a href="">Phyton Tutorial</a><br>
+            <a href="">W3.CSS Tutorial</a><br>
+            <a href="">Bootstrapt Tutorial</a><br>
+            <a href="">PHP Tutorial</a><br>
+            <a href="">Java Tutorial</a><br>
+            <a href="">C++ Tutorial</a><br>
+            <a href="">jQuery Tutorial</a><br>
+
+        </div>
+        <div class="top-tutorial">
+            <h5 style="font-size: 20px; color: white;">Top Tutorial</h5><br>
+            <a href="">HTML Tutorial</a><br>
+            <a href="">Css Tutorial</a><br>
+            <a href="">JavaScript Tutorial</a><br>
+            <a href="">How TO Tutorial</a><br>
+            <a href="">SQL Tutorial</a><br>
+            <a href="">Phyton Tutorial</a><br>
+            <a href="">W3.CSS Tutorial</a><br>
+            <a href="">Bootstrapt Tutorial</a><br>
+            <a href="">PHP Tutorial</a><br>
+            <a href="">Java Tutorial</a><br>
+            <a href="">C++ Tutorial</a><br>
+            <a href="">jQuery Tutorial</a><br>
+
+
+        </div>
+        <div class="top-tutorial">
+            <h5 style="font-size: 20px; color: white;">Top Examples</h5><br>
+            <a href="">HTML Tutorial</a><br>
+            <a href="">Css Tutorial</a><br>
+            <a href="">JavaScript Tutorial</a><br>
+            <a href="">How TO Tutorial</a><br>
+            <a href="">SQL Tutorial</a><br>
+            <a href="">Phyton Tutorial</a><br>
+            <a href="">W3.CSS Tutorial</a><br>
+            <a href="">Bootstrapt Tutorial</a><br>
+            <a href="">PHP Tutorial</a><br>
+            <a href="">Java Tutorial</a><br>
+            <a href="">C++ Tutorial</a><br>
+            <a href="">jQuery Tutorial</a><br>
+
+
+        </div>
+        <div class="top-tutorial">
+            <h5 style="font-size: 20px;color: #ffffff;">Get Certified</h5><br>
+            <a href="">HTML Tutorial</a><br>
+            <a href="">Css Tutorial</a><br>
+            <a href="">JavaScript Tutorial</a><br>
+            <a href="">How TO Tutorial</a><br>
+            <a href="">SQL Tutorial</a><br>
+            <a href="">Phyton Tutorial</a><br>
+            <a href="">W3.CSS Tutorial</a><br>
+            <a href="">Bootstrapt Tutorial</a><br>
+            <a href="">PHP Tutorial</a><br>
+            <a href="">Java Tutorial</a><br>
+            <a href="">C++ Tutorial</a><br>
+            <a href="">jQuery Tutorial</a><br>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="footer-icon">
+        <div class="footer-box">
+
+            <i style="font-size:25px;color: white;padding-left: 8px;cursor: pointer;" class="fa fa-facebook-square"
+                aria-hidden="true"></i>
+            <i style="font-size:25px;color: white;padding-left: 8px;cursor: pointer;" class="fa fa-reddit-alien"
+                aria-hidden="true"></i>
+            <i style="font-size:25px;color: white;padding-left: 8px;cursor: pointer;" class="fa fa-linkedin-square"
+                aria-hidden="true"></i>
+            <i style="font-size:25px;color: white;padding-left: 8px;cursor: pointer;" class="fa fa-instagram"
+                aria-hidden="true"></i>
+            <a style="padding-left: 30px;padding-top: 8px;font-size: 15px;" href="">FORM</a>
+            <a style="padding-left: 20px;padding-top: 8px;font-size: 15px;" href="">ABOUT</a>
+        </div>
+
+    </div>
+    <div class="last-hover11">
+        <div class="footer-small-text">
+            <h6 style="padding-left: 155px; width: 700px; font-size: 13px; color: white;">W3Schools is optimized for
+                learning and training. Examples might be simplified to improve reading and learning.
+                Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full
+                correctness
+                of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and
+                privacy policy.</h6><br>
+            <p
+                style="padding-left: 155px; width: 700px; text-decoration: solid; font-size: 13px; color: white; padding-bottom: 30px;">
+                <a class="last-hover" href="">Copyright 1999-2023</a> by Refsnes Data. All Rights Reserved. <a
+                    class="last-hover" href=""> W3Schools is Powered by W3.CSS.</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
+</body>
+
+</html>
